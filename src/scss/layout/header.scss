@@ -1,0 +1,44 @@
+/* Header */
+
+header {
+    //position: fixed;
+    .nav {
+        width: 40%;
+    }
+}
+.header-inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav {
+    > a {
+        padding: 4px 10px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        &:hover,
+        &:focus {
+            color: var(--color-blue);
+            &::after {
+                background: var(--color-blue);
+            }
+        }
+        &::after {
+            content: "";
+            height: 3px;
+            display: block;
+            background: transparent;
+            width: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

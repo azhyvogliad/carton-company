@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="nav nav-main">
+                <a href="#abouts">About us</a>
+                <a href="#reservation">Reservation</a>
+                <a href="#gallery">Gallery</a>
+            </div>        
+            @@if (context.homeLogo=== true ) {
+                <div class="logo"><img src="images/logo.png" alt="YOGA"></div>
+            } 
+            @@if (context.pageLogo=== true ) {
+                <a class="logo" href="index.html"><img src="images/logo.png" alt="YOGA"></a>
+            }       
+            <di class="nav nav-secondary">
+                <a href="blog.html" @@if (context.blog==='current' ) {class="current" }>Blog</a>
+                <a href="elements.html" @@if (context.elements==='current' ) {class="current" }>Elements</a>
+                <a href="shop.html" @@if (context.shop==='current' ) {class="current" }>Shop</a>
+            </di>
+        </div>
+    </div>    
+</header>

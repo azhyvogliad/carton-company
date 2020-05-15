@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('../partials/head/head.html',{
+"title": "Home"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../partials/components/header.html')
+        @@include('../partials/components/entry-section.html')
+        @@include('../partials/components/abouts.html', {
+        "title": "About us",
+        "intro-text": "test resdfsf"
+        })
+        @@include('../partials/components/products.html')
+        @@include('../partials/components/footer.html')
+    </div>
+    @@include('../partials/scripts/common.html')
+</body>
+
+</html>
