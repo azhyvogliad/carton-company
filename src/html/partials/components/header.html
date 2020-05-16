@@ -1,22 +1,41 @@
 <header class="header">
-    <div class="container">
-        <div class="header-inner">
-            <div class="nav nav-main">
-                <a href="#abouts">About us</a>
-                <a href="#reservation">Reservation</a>
-                <a href="#gallery">Gallery</a>
-            </div>        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-header d-flex justify-content-between">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navmain"
+                aria-controls="navmain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             @@if (context.homeLogo=== true ) {
-                <div class="logo"><img src="images/logo.png" alt="YOGA"></div>
-            } 
+            <div class="navbar-brand mx-auto"><img src="images/logo.png" alt="Tilsner Carton Company"></div>
+            }
             @@if (context.pageLogo=== true ) {
-                <a class="logo" href="index.html"><img src="images/logo.png" alt="YOGA"></a>
-            }       
-            <di class="nav nav-secondary">
-                <a href="blog.html" @@if (context.blog==='current' ) {class="current" }>Blog</a>
-                <a href="elements.html" @@if (context.elements==='current' ) {class="current" }>Elements</a>
-                <a href="shop.html" @@if (context.shop==='current' ) {class="current" }>Shop</a>
-            </di>
+            <a class="navbar-brand mx-auto" href="index.html"><img src="images/logo.png"
+                    alt="Tilsner Carton Company"></a>
+            }
         </div>
-    </div>    
+        <div class="navbar-collapse collapse justify-content-between" id="navmain">
+            <ul class="navbar-nav">
+                <li class="nav-item @@if (context.home==='current' ) {active}">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item @@if (context.products==='current' ) {active}">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item @@if (context.abouts==='current' ) {active}">
+                    <a class="nav-link" href="index.html">About</a>
+                </li>
+                <li class="nav-item @@if (context.contacts==='current' ) {active}">
+                    <a class="nav-link" href="index.html">Contact</a>
+                </li>
+            </ul>
+            @@if (context.homeLogo=== true ) {
+            <div class="navbar-brand hidden-md"><img src="images/logo.png" alt="Tilsner Carton Company"></div>
+            }
+            @@if (context.pageLogo=== true ) {
+            <a class="navbar-brand hidden-md" href="index.html"><img src="images/logo.png"
+                    alt="Tilsner Carton Company"></a>
+            }
+            <a href="#requestQuote" class="btn btn-primary text-uppercase btn-type-1">Request a Quote</a>
+        </div>
+    </nav>
 </header>

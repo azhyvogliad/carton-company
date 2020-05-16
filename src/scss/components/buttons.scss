@@ -1,0 +1,58 @@
+.btn {
+    font-family: "open_sansbold";
+    //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+}
+.btn-primary {
+    $btn-primary: #012d56;
+    $btn-border: $primary;
+    $btn-hover-background: darken($primary, 7.5%);
+    $hover-background: light($primary, 7.5%);
+    $active-background: darken($primary, 10%);
+    $active-border: darken($primary, 12.5%);
+    $btn-box-shadow: 0 1px 1px rgba($black, 0.075);
+    @include button-variant(
+        $btn-primary,
+        $btn-border,
+        $btn-hover-background,
+        $hover-background,
+        $active-background,
+        $active-border
+    );
+    color: $light;
+    &:hover {
+        @include box-shadow($btn-box-shadow);
+    }
+}
+.btn-secondary {
+    $secondary: #ffeb74;
+    $btn-border: $secondary;
+    $btn-hover-background: darken($secondary, 7.5%);
+    $hover-background: light($secondary, 7.5%);
+    $active-background: darken($secondary, 10%);
+    $active-border: darken($secondary, 12.5%);
+    $btn-box-shadow: 0 1px 1px rgba($black, 0.075);
+    @include button-variant(
+        $secondary,
+        $btn-border,
+        $btn-hover-background,
+        $hover-background,
+        $active-background,
+        $active-border
+    );
+    color: $primary;
+    &:hover {
+        @include box-shadow($btn-box-shadow);
+    }
+}
+.icon-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.icon-covid-19 {
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/icon-covid-19.png);
+}

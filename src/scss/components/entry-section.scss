@@ -1,3 +1,66 @@
+.entry-section {
+    position: relative;
+    background-color: #7b2e00;
+    padding: 7.5rem 0;
+    background: url(../images/bg-entry.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    &::before,
+    &::after {
+        width: 100%;
+        display: block;
+        position: absolute;
+        content: "";
+    }
+    &::before {
+        top: 0;
+        height: 100%;
+        background-color: #7b2e00;
+        opacity: 0.4;
+    }
+    &::after {
+        bottom: 0;
+        left: 0;
+        height: 21px;
+        background: url(../images/bg-wave.png) repeat-x 0 100%;
+    }
+    .entry {
+        max-width: 730px;
+        margin-bottom: 40px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        h1 {
+            margin-bottom: 10px;
+            color: inherit;
+            font-family: "open_sansextrabold";
+            text-transform: uppercase;
+        }
+        .btn {
+            max-width: 220px;
+            width: 100%;
+        }
+    }
+    .entry-dsc {
+        margin-bottom: 20px;
+    }
+}
+.entry-section + .products {
+    margin-top: -120px;
+}
 
+@include media-breakpoint-down(sm) {
+    .entry {
+        h1 {
+            font-size: 26px;
+        }
+    }
+}
 
-
+@include media-breakpoint-up(md) {
+    .entry {
+        .entry-dsc {
+            font-size: 1.25rem;
+        }
+    }
+}

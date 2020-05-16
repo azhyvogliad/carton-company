@@ -7,13 +7,11 @@
 
 <body>
     <div class="wrapper">
-        @@include('../partials/components/header.html')
+        @@include('../partials/components/header.html', {"homeLogo": true, "home": "current"})
         @@include('../partials/components/entry-section.html')
-        @@include('../partials/components/abouts.html', {
-        "title": "About us",
-        "intro-text": "test resdfsf"
-        })
         @@include('../partials/components/products.html')
+        @@include('../partials/components/info.html')
+        @@include('../partials/components/products-in-stock.html')
         @@include('../partials/components/footer.html')
     </div>
     @@include('../partials/scripts/common.html')

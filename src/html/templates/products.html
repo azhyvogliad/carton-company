@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('../partials/head/head.html',{
+"title": "Products"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../partials/components/header.html', {"pageLogo": true, "products": "current"})
+
+        @@include('../partials/components/products.html')
+        <nav class="navbar navbar-inverse navbar-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand visible-xs" href="index.php">Logo</a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="about-us.php">About Us</a></li>
+                            <li><a href="media.php">Media</a></li>
+                            <li><a href="events.php">Events</a></li>
+                        </ul>
+                        <div class="navbar-brand hidden-xs">
+                            <a class="white-circle" href="index.php">
+                                <img class="logo img-circle" src="http://excitive.me/demo/temp/logo.svg" alt="Logo">
+                            </a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="things-to-do.php">Things To Do</a></li>
+                            <li><a href="offers.php">Offers</a></li>
+                            <li><a href="index.php#location">Location</a></li>
+                            <li><a href="book-now.php">Book Now</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+
+        @@include('../partials/components/footer.html')
+    </div>
+    @@include('../partials/scripts/common.html')
+</body>
+
+</html>
